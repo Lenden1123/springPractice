@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인페이지</title>
+    <link rel="stylesheet" href="/src/main/resources/static/css/main.css">
+</head>
+<body>
+    <div>
+        <p>
+            <h1>메인화면</h1>
+        </p>
+        <table>
+            <tr>
+                <th>이름</th>
+                <th>가입일</th>
+            <tr th:each = "arr : ${userArr}">
+                <td th:text = "${arr.name}">name</td>
+                <td th:text = "${arr.joindate}">joindate</td>
+        </table>
+    </div>
+    <div>
+        <button type="button">로그인</button>
+    </div>
+</body>
+</html>
